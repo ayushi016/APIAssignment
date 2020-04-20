@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qait.actions.GetSpecificEmployeeData">
+      <class name="com.qait.utility.BaseClass">
         <methods>
-          <include name="get"/>
+          <include name="base"/>
         </methods>
-      </class> <!-- com.qait.actions.GetSpecificEmployeeData -->
+      </class> <!-- com.qait.utility.BaseClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

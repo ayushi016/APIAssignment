@@ -3,6 +3,8 @@ package com.qait.actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.qait.utility.GetAPIResponse;
+
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
 
@@ -14,8 +16,7 @@ public class GetAllEmployeeData {
 		String route = "/employees";
 		Response response = new GetAPIResponse().getRequest(route);		
 		Assert.assertEquals(response.getStatusCode(),200);
-	    System.out.println(response.asString());
-		 
+	    System.out.println(response.asString());	 
 		 
 		 
 	}

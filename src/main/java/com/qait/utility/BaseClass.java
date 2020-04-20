@@ -10,7 +10,6 @@ public class BaseClass {
 	public void base() {
 		GetAllEmployeeData.getEmployeeData();
 		int id = new CreateEmployee().getCreatedEmployeeID();
-		id = 3;
 		GetSpecificEmployeeData.get(id);
 		UpdateEmployeeData.updateEmployeeDetails(id);
 		DeleteEmployee.delete(id);

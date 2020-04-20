@@ -21,7 +21,7 @@ public class CreateEmployee {
 		            "  \"age\":\""    +age + "\"" +
 		            "}";
 	    response = new GetAPIResponse().postRequest(route,requestBody);
-	    Assert.assertEquals(response.getStatusCode(),200);
+	   Assert.assertEquals(response.getStatusCode(),200);
 	    System.out.println("employeee created--->>>"+response.asString());
 }
 	
