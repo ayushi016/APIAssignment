@@ -1,9 +1,10 @@
-package com.qait.actions;
+package com.restAPI.actions;
 
 import org.json.JSONObject;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-import com.qait.utility.GetAPIResponse;
+
+import com.restAPI.utility.GetAPIResponse;
+
 import io.restassured.response.Response;
 
 public class CreateEmployee {
@@ -20,13 +21,12 @@ public class CreateEmployee {
 		            "  \"salary\":\"" + salary + "\"," +
 		            "  \"age\":\""    +age + "\"" +
 		            "}";
-	    response = new GetAPIResponse().postRequest(route,requestBody);
-	   Assert.assertEquals(response.getStatusCode(),200);
+	    response = GetAPIResponse.postRequest(route,requestBody);
+//	   Assert.assertEquals(response.getStatusCode(),200);
 	    System.out.println("employeee created--->>>"+response.asString());
 }
-	
-	@Test
-	public int getCreatedEmployeeID() {
+
+	public static int getCreatedEmployeeID() {
 		
 		String responseBody = response.getBody().asString();
 		JSONObject list = new JSONObject(responseBody);

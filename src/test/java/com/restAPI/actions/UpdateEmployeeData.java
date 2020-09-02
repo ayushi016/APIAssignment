@@ -1,15 +1,17 @@
-package com.qait.actions;
+package com.restAPI.actions;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.qait.utility.GetAPIResponse;
+import com.restAPI.utility.GetAPIResponse;
 
 import io.restassured.response.Response;
 
 public class UpdateEmployeeData {
 
-	@Test
+
 	public static void updateEmployeeDetails(int id) {
 	
 		String name = "abcghjvjg", salary = "11223000";
@@ -22,7 +24,7 @@ public class UpdateEmployeeData {
 		            "  \"age\":\""    +age + "\"" +
 		            "}";
 		Response response = new GetAPIResponse().updateRequest(route,requestBody);
-		Assert.assertEquals(response.getStatusCode(),200);
+//		AssertJUnit.assertEquals(response.getStatusCode(),200);
 		System.out.println("updated-----------"+response.asString());
 	}
 }

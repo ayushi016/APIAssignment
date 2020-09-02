@@ -1,24 +1,21 @@
-package com.qait.actions;
+package com.restAPI.actions;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
-import com.qait.utility.GetAPIResponse;
 
-import io.restassured.RestAssured;
+import com.restAPI.utility.GetAPIResponse;
+
 import io.restassured.response.Response;
 
 
 public class GetAllEmployeeData {
     
-	@Test
 	public static void getEmployeeData() {
 		
 		String route = "/employees";
-		Response response = new GetAPIResponse().getRequest(route);		
+		Response response = GetAPIResponse.getRequest(route);		
 		Assert.assertEquals(response.getStatusCode(),200);
 	    System.out.println(response.asString());	 
-		 
-		 
+
 	}
 	
 }

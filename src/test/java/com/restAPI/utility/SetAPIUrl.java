@@ -1,4 +1,4 @@
-package com.qait.utility;
+package com.restAPI.utility;
 
 import io.restassured.RestAssured;
 
